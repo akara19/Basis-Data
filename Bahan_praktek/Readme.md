@@ -1,0 +1,2 @@
+- File .sql berisi data dummy yang bisa digunakan sebagai bahan untuk praktikum
+- File ERD merupakan file yang menggambarkan hubungan antar tabel
