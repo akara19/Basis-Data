@@ -1,0 +1,27 @@
+CREATE PROCEDURE nama ()
+BEGIN
+ -- isi query
+END;
+
+DROP PROCEDURE IF EXISTS tampil_barang;
+CREATE PROCEDURE tampil_barang()
+BEGIN
+	SELECT idBarang,namBarang FROM mbarang;
+END;
+
+CREATE PROCEDURE cari_barang(fidBarang VARCHAR(50))
+BEGIN
+	SELECT * FROM mbarang 
+	WHERE idBarang=fidBarang;
+END;
+CALL tampil_barang();
+CALL cari_barang('B000000002');
+
+
+CREATE PROCEDURE laporan_penjualan()
+BEGIN
+	SELECT * FROM djual
+	INNER JOIN mjual ON mjual.NoNota=djual.NoNota;
+END;
+
+CALL laporan_penjualan();
